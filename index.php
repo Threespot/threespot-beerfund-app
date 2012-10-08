@@ -20,7 +20,7 @@
 		<div class="about">
 			<p><span class="titlecase">F</span>riday afternoon is beer o'clock at Threespot, or at least, it is when everyone pitches in. If you enjoy having a cold one at the end of a long work week, then please do your part by contributing to the Friday beer fund on a regular basis.</p>
 
-			<p>Suggested contribution is $20, and your name will push to the top of the list where you'll be free from suspicion as a beer mootcher. Contributions go to the Threespot Chief Beer Officer (CBO), Chris Davis.</p>
+			<p>Suggested contribution is $20, and your name will push to the top of the list where you'll be free from suspicion as a beer mootcher. Give contributions to the Chief Beer Officer (CBO), Chris Davis.</p>
 		</div>
 		<div id="pint">
 			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="fund-meter"></svg>
