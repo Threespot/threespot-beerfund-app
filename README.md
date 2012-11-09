@@ -1,6 +1,6 @@
 #Threespot Beer Fund
 
-The Threespot Beer Fund app. Built using Require.js + Knockout with a simple PHP backend.
+The Threespot Beer Fund app. A small productivity app for managing the Friday afternoon employee-funded beer fund balance. Built on Knockout.js+Require.js.
 
 ##Versions
 
@@ -15,7 +15,6 @@ All development should be done within `src/`, then built (see instructions below
 	- DB name: "beerfund"
 	- user: "root"
 	- pass: "root"
-
 2. You should be up and running if you used the default app config. Otherwise, adjust the database connection info in `src/bf-connection.php`.
 
 ##Build
@@ -31,4 +30,4 @@ Then to create builds, `cd` into the Beerfund root directory and run:
 
 Building the application will assemble Require.js modules into named, minified, and concatenated scripts, and copy all built assets over into the `dist/` directory.
 
-*Note: the Require.js build process is **NOT** the same as simply minifying and concatenating scripts the way you would with a service such as Rails' asset pipeline. Require's build process also assigns unique IDs to each module based on the script file it was pulled from. Using other min/concat services will require that you manually assign module IDs based on filename.*
+*Note: the Require.js build process is NOT the same as simply minifying and concatenating scripts the way you would with a service such as Rails' asset pipeline. Require's build process also assigns unique IDs to each module based on the script file it was pulled from. Using other min/concat services will require that you manually assign module IDs based on filename.*
