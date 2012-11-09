@@ -1,6 +1,5 @@
 // Threespot Beer Fund App
-// Greg MacWilliam, Threespot.
-// Main application bootstrapper.
+// (c) 2011-2012 Threespot.
 
 /*global require */
 /*jslint browser:true */
