@@ -1,8 +1,0 @@
-{
-	"name": "beerfund",
-	"version": "1.0.0",
-	"description": "Optimize RequireJS projects using r.js.",
-	"dependencies": {
-		"grunt-contrib-requirejs": "~0.3.0"
-	}
-}
