@@ -1,0 +1,44 @@
+// REM Font Size Mixin
+html {
+  font-size: 62.5%;
+}
+@mixin font-size ( $size: 14 ) {
+  font-size: $size + px;
+  font-size: $size/10 + rem;
+}
+body {
+  @include font-size( 16 );
+}
+
+// Colors
+// https://github.com/Threespot/tsm-maestro/blob/master/app/assets/stylesheets/globals/_colors.scss
+$tsBlack: #16161D; // http://en.wikipedia.org/wiki/Eigengrau
+$tsGrey: #bfc2c5;
+$tsRed: #e12037;
+$tsGold: #f5d537;
+$tsOrange: #f0b336;
+
+
+
+// Jake Archibalds Sass-IE
+// http://jakearchibald.github.io/sass-ie/
+$fix-mqs: false !default;
+@mixin respond-min($width) {
+  @if $fix-mqs {
+    @if $fix-mqs >= $width {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+$old-ie: false !default;
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
