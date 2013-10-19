@@ -5,50 +5,31 @@ body {
   color: $tsBlack;
 }
 
-h1 {
-  @include font-size(24);
-  font-weight: 300;
-  line-height: 1.2;
-  text-align: center;
-
-  // @include respond-min( 480px ) {
-  //   @include font-size(30);
-  // }
-}
-
 .balance {
-  text-align: center;
-  margin: 2em;
-
-  span {
-    @include font-size(80);
-    color: $tsOrange;
-    display: block;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    line-height: 1;
-  }
-
-  p {
-    margin: 0;
-  }
+  background: transparentize($tsGold, 0.9);
+  margin: 1em 0;
+  padding: 0.5em 5%;
 }
 
 .donors {
+  background: transparentize($tsGold, 0.9);
+  margin: 1em 0;
+  padding: 0.5em 5%;
+
   list-style: none;
-  margin: 0 5%;
-  padding: 5%;
-  background: transparentize($tsOrange, 0.9);
 
   li {
     margin: 0;
     padding: 0 0 0 1.4em;
-    position: relative;
 
     i {
-      position: absolute;
-      left: 0;
-      top: 0.1em;
+      color: $tsGold;
     }
   }
+}
+
+.about {
+  background: transparentize($tsGold, 0.9);
+  margin: 1em 0;
+  padding: 0.5em 5%;
 }
