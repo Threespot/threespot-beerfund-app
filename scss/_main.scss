@@ -1,35 +1,59 @@
-// main
-
-body {
-  margin: 0 5%;
-  color: $tsBlack;
-}
-
-.balance {
-  background: transparentize($tsGold, 0.9);
+// Layout
+.section {
+  @include clearfix;
   margin: 1em 0;
-  padding: 0.5em 5%;
-}
+  padding: 1em;
 
-.donors {
-  background: transparentize($tsGold, 0.9);
-  margin: 1em 0;
-  padding: 0.5em 5%;
-
-  list-style: none;
-
-  li {
-    margin: 0;
-    padding: 0 0 0 1.4em;
-
-    i {
-      color: $tsGold;
+  @include respond-min( 480px ) {
+    &.main {
+      padding: 0;
+      position: relative;
+    }
+    .balance,
+    .donors {
+      float: left;
+      padding: 0 1em;
+      width: 50%;
+    }
+    .balance {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    .donors {
+      margin-left: 50%;
     }
   }
 }
 
-.about {
-  background: transparentize($tsGold, 0.9);
-  margin: 1em 0;
-  padding: 0.5em 5%;
+// Component Styles
+.section {
+
+  // Balance Graphic
+  .balance {
+    padding-left: 20%;
+    position: relative;
+    min-height: 10em;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 85%;
+      height: 100%;
+    }
+  }
+  @include respond-min( 480px ) {
+    .balance {
+      position: absolute;
+      padding-left: 25%;
+
+      img {
+        position: absolute;
+        top: 0;
+        right: 60%;
+        height: 100%;
+      }
+    }
+  }
 }

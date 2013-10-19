@@ -1,7 +1,19 @@
 // Base Styles
 
+* {
+  @include box-sizing(border-box);
+}
+
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
+  background: #fff;
+  color: $tsBlack;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.4;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
