@@ -1,10 +1,21 @@
 // Layout
 .section {
   @include clearfix;
-  margin: 1em 0;
+  margin: 2em 0 1em;
   padding: 1em;
 
+  &.h1 {
+    margin: 0;
+    padding: 1em 1em 0;
+  }
+
+  .donors {
+    margin: 3em 0 0;
+  }
+
   @include respond-min( 480px ) {
+    margin: 3em 0 1em;
+
     &.main {
       padding: 0;
       position: relative;
@@ -12,17 +23,19 @@
     .balance,
     .donors {
       float: left;
-      padding: 0 1em;
-      width: 50%;
+      padding: 0 2em;
+      width: 40%;
     }
     .balance {
       height: 100%;
       left: 0;
       position: absolute;
       top: 0;
+      width: 60%;
     }
     .donors {
-      margin-left: 50%;
+      margin: 0 0 0 60%;
+      min-height: 30em;
     }
   }
 }
@@ -32,27 +45,78 @@
 
   // Balance Graphic
   .balance {
-    padding-left: 20%;
+    padding-left: 30%;
     position: relative;
     min-height: 10em;
 
     img {
       position: absolute;
       top: 0;
-      right: 85%;
+      right: 80%;
       height: 100%;
     }
-  }
-  @include respond-min( 480px ) {
-    .balance {
+
+    p {
+      margin-top: 0.5em;
+    }
+
+    @include respond-min( 480px ) {
       position: absolute;
-      padding-left: 25%;
+
+      h2 {
+        @include font-size(40);
+        margin-bottom: 0;
+      }
 
       img {
         position: absolute;
         top: 0;
         right: 60%;
         height: 100%;
+      }
+    }
+
+    @include respond-min( 768px ) {
+      h2 {
+        @include font-size(60);
+      }
+    }
+  }
+
+  // Donors List
+  .donors {
+
+    h2 {
+      background: $tsOrange;
+    }
+
+    ul {
+      @extend %reset-list;
+      padding: 0.5em 0 0;
+
+      li {
+        clear: both;
+        float: left;
+        margin: 0.25em 0 0;
+        padding: 0.1em 0.8em;
+        position: relative;
+
+        &.big-donor {
+          background: lighten($tsOrange, 35%);
+
+          &:before {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-top: 0.35em solid $tsOrange;
+            border-left: 0.35em solid $tsOrange;
+            border-bottom: 0.35em solid transparent;
+            border-right: 0.35em solid transparent;
+          }
+        }
       }
     }
   }

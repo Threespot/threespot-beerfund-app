@@ -17,3 +17,47 @@ h2 {
   margin: 0;
   padding: 0;
 }
+h1 {
+  @include font-size(30);
+  color: $tsGray;
+  font-weight: 100;
+  text-transform: lowercase;
+
+  @include respond-min( 480px ) {
+    @include font-size(60);
+  }
+}
+h2 {
+  @include inline-block;
+  background: $tsYellow;
+  color: #fff;
+  letter-spacing: 0.02em;
+  padding: 0.1em 0.8em;
+  position: relative;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.2x);
+
+  &:before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 0.35em solid #fff;
+    border-left: 0.35em solid #fff;
+    border-bottom: 0.35em solid transparent;
+    border-right: 0.35em solid transparent;
+  }
+  &:after {
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 0.35em solid #fff;
+    border-right: 0.35em solid #fff;
+    border-top: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+  }
+}
