@@ -16,8 +16,13 @@ $tsBlack: #16161D;
 $tsGray: #afb8c0;
 $tsYellow: #f0b336;
 $tsOrange: #f1711a;
-
-
+$tsBlue: #2462b4;
+$tsBlueGray: #afb8c0;
+$tsPurple: #9626ac;
+$tsWhite: #fefefe;
+$tsGreen: #2ba352;
+$tsDarkGray: #7f868c;
+$tsRed: #e12037;
 
 // Jake Archibalds Sass-IE
 // http://jakearchibald.github.io/sass-ie/
@@ -48,6 +53,7 @@ $old-ie: false !default;
   border: 0;
   overflow: hidden;
   *text-indent: -9999px; // IE 6/7 fallback
+
   &:before {
     content: "";
     display: block;
@@ -55,10 +61,12 @@ $old-ie: false !default;
     height: 150%;
   }
 }
+
 %hidden { // Hide from both screenreaders and browsers
   display: none !important;
   visibility: hidden;
 }
+
 %visuallyhidden { // Hide visually
   border: 0;
   clip: rect(0 0 0 0);
@@ -68,6 +76,7 @@ $old-ie: false !default;
   padding: 0;
   position: absolute;
   width: 1px;
+
   &.focusable:active,
   &.focusable:focus { // Extends the .visuallyhidden class to allow the element to be focusable
     clip: auto;
@@ -78,29 +87,7 @@ $old-ie: false !default;
     width: auto;
   }
 }
+
 %invisible { // Hide but maintain layout
   visibility: hidden;
 }
-%clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-%reset-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-
