@@ -46,6 +46,10 @@
   position: relative;
   min-height: 20em;
 
+  h2 {
+    padding: 1em 0.4em;
+  }
+
   img {
     height: 100%;
     position: absolute;
@@ -84,9 +88,14 @@
     }
   }
 
-  @include respond-min( 800px ) {
+  @include respond-min( 480px ) {
     h2 {
-      @include font-size(38);
+      @include font-size(32);
+    }
+  }
+  @include respond-min( 1000px ) {
+    h2 {
+      @include font-size(48);
     }
   }
 }
